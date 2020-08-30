@@ -1,5 +1,5 @@
 /*
-Copyright 2012 Jun Wako <wakojun@gmail.com>
+Copyright 2020 <me@homedrop.org>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -20,12 +20,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID    0x4335 // GEEKhack
-#define PRODUCT_ID   0x0001
-#define DEVICE_VER   0x0001
-#define MANUFACTURER    geekhack
-#define PRODUCT         GH60 Rev C
-#define DESCRIPTION     t.m.k. keyboard firmware for GH60
+#define VENDOR_ID    0x7074 // FJLabs
+#define PRODUCT_ID   0x0002 // FJ60BLX
+#define DEVICE_VER   0x0002 // Version 1
+#define MANUFACTURER    FJLabs
+#define PRODUCT         FJ60BLX
+#define DESCRIPTION     QMK Keyboard firmware for the FJ60BLX
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -41,11 +41,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
  *         ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
- #define MATRIX_ROW_PINS { D0, D1, D2, D3, D5 }
-// Rev A
-// #define MATRIX_COL_PINS { F0, F1, E6, C7, C6, B6, D4, B1, B0, B5, B4, D7, D6, B3 }
-// Rev B/C
-   #define MATRIX_COL_PINS { F0, F1, E6, C7, C6, B6, D4, B1, B7, B5, B4, D7, D6, B3 }
+
+// Checked with Eagle Schematic
+#define MATRIX_ROW_PINS { F0, F1, F2, F3, F4  }
+#define MATRIX_COL_PINS { A0, A1, A2, A3, A4, A5, A7, A6, C3, C2, C1, C0, E1, E0}
 #define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
@@ -57,13 +56,25 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
 
-/* number of backlight levels */
-#define BACKLIGHT_LEVELS 3
-
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+
+/* Define RGB Underglow */
+#define RGB_DI_PIN B5
+#define RGBLED_NUM 24
+#define RGBLIGHT_ANIMATIONS
+
+/* Define Per Key Options */
+#define BACKLIGHT_PIN B6
+#define BACKLIGHT_LEVELS 7
+#define BACKLIGHT_BREATHING
+#define BREATHING_PERIOD 3
+
+/* Define less important options */
+#define USB_MAX_POWER_CONSUMPTION 500
+#define USB_POLLING_INTERVAL_MS 5
 
 /*
  * Force NKRO
@@ -149,5 +160,5 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
