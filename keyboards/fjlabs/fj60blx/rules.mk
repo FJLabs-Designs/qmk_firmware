@@ -37,4 +37,4 @@ BACKLIGHT_ENABLE = yes		# Enable Per Key Backlight support
 BACKLIGHT_DRIVER = pwm		# Connected to an actual PWM Pin
 
 ########### LAYOUTS ###########
-LAYOUTS = 65_ansi
+LAYOUTS = 60_standard
