@@ -38,3 +38,6 @@ BACKLIGHT_DRIVER = pwm		# Connected to an actual PWM Pin
 
 ########### LAYOUTS ###########
 LAYOUTS = 60_standard
+
+########### BLUETOOTH ###########
+BLUETOOTH = AdafruitBLE

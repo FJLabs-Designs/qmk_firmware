@@ -76,6 +76,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #define USB_MAX_POWER_CONSUMPTION 500
 #define USB_POLLING_INTERVAL_MS 5
 
+/* Define Bluetooth Pins */
+#define AdafruitBleResetPin D4
+#define AdafruitBleCSPin B4
+#define AdafruitBleIRQPin E4
+
 /*
  * Force NKRO
  *
