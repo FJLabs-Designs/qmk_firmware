@@ -72,10 +72,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #define BACKLIGHT_BREATHING
 #define BREATHING_PERIOD 3
 
-/* Define less important options */
-#define USB_MAX_POWER_CONSUMPTION 500
-#define USB_POLLING_INTERVAL_MS 5
-
 /* Define Bluetooth Pins */
 #define AdafruitBleResetPin D4
 #define AdafruitBleCSPin B4
