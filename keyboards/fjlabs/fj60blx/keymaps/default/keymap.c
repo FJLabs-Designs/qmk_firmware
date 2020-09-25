@@ -1,6 +1,5 @@
 #include QMK_KEYBOARD_H
 
-
 #define _LAYER0 0
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
