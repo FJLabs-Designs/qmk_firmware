@@ -1,6 +1,3 @@
-# MCU name
-MCU = at90usb646
-
 # Processor frequency
 F_CPU = 8000000
 
