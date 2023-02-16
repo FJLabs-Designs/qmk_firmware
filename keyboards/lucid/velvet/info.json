@@ -1,12 +1,12 @@
 {
-    "keyboard_name": "Velvet",
+    "keyboard_name": "Velvet Solder",
     "manufacturer": "FJLaboratories",
     "url": "http://www.makerkeyboards.com",
     "maintainer": "Maker Keyboards",
     "usb": {
-        "vid": "0x7667",
+        "device_ver": "0x0001",
         "pid": "0x0007",
-        "device_version": "1.0.0"
+        "vid": "0x7667"
     },
     "diode_direction": "COL2ROW",
     "matrix_pins": {
@@ -92,7 +92,7 @@
                 {"matrix": [3, 8], "label":"K", "x":8.75, "y":3.25},
                 {"matrix": [3, 9], "label":"L", "x":9.75, "y":3.25},
                 {"matrix": [3, 10], "label":":", "x":10.75, "y":3.25},
-                {"matrix": [3, 10], "label":"SQ", "x":11.75, "y":3.25},
+                {"matrix": [3, 11], "label":"SQ", "x":11.75, "y":3.25},
                 {"matrix": [3, 13], "label":"Enter", "x":12.75, "y":3.25, "w":2.25},
  
                 {"matrix": [4, 0], "label":"Left Shift", "x":0, "y":4.25, "w":1.25},
