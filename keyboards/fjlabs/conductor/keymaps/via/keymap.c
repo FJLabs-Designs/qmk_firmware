@@ -20,7 +20,7 @@ enum layers {
     _LAYER2,
     _LAYER3
 };
-
+/*
 enum custom_keycodes {
     A_CW = USER00,
     A_CCW,
@@ -40,22 +40,30 @@ enum custom_keycodes {
     D_X,
     E_X,
     F_X,
-};
+}; */
 
-#if defined(ENCODER_MAP_ENABLE)
+/*#if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [_LAYER0] = { ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS)},
-    [_LAYER1] = { ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS)},
-    [_LAYER2] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS)},
-    [_LAYER3] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS), ENCODER_CCW_CW(KC_TRNs, KC_TRNS)},
+    [_LAYER1] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [_LAYER2] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [_LAYER3] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [_LAYER0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
 };
-#endif
+#endif */
+
+void keyboard_post_init_user(void) {
+  // Customise these values to desired behaviour
+  debug_enable=true;
+  debug_matrix=true;
+  debug_keyboard=true;
+  //debug_mouse=true;
+}
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_LAYER0] = LAYOUT_all(
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,
+        QK_BOOT,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,
         KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12 
     ),
 
@@ -80,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 
-/* Define MIDI custom keycodes here */
+/* Define MIDI custom keycodes here 
 extern MidiDevice midi_device;
 #define MIDI_CC_OFF 0
 #define MIDI_CC_ON  127
@@ -192,4 +200,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         default:
             return true;
     }
-}
+} */

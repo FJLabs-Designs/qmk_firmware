@@ -8,6 +8,14 @@
         "pid": "0x0500",
         "device_version": "1.0.0"
     },
+    "features": {
+        "encoder": true
+    },
+    "encoder": {
+        "rotary": [
+            { "pin_a": "B4", "pin_b": "B2" }
+        ]
+    },
     "layouts": {
         "LAYOUT_all": {
             "layout": [
