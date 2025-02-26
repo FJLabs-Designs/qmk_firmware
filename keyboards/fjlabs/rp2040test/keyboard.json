@@ -1,0 +1,29 @@
+{
+    "keyboard_name": "RP2040-test",
+    "manufacturer": "FJLaboratories",
+    "url": "https://fjlaboratories.com",
+    "maintainer": "FJLabs",
+    "usb": {
+        "vid": "0x7074",
+        "pid": "0x5234",
+        "device_version": "0.0.1"
+    },
+    "diode_direction": "COL2ROW",
+    "features": {
+        "extrakey": true
+    },
+    "matrix_pins": {
+        "cols": ["GP26", "GP24"],
+        "rows": ["GP18"]
+    },
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "layouts": {
+        "LAYOUT_all": {
+            "layout": [
+                {"matrix": [0,0], "x": 0, "y": 0},
+                {"matrix": [0,1], "x": 1, "y": 0}
+            ]
+        }
+    }
+}
